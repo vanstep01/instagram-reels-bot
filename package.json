@@ -1,0 +1,20 @@
+{
+  "name": "instagram-reels-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "prod": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js",
+    "docker:build": "docker build -t insta-reels-bot .",
+    "docker:run": "docker run -d --name insta-reels-bot insta-reels-bot"
+  },
+  "dependencies": {
+    "telegraf": "^4.12.2",
+    "axios": "^1.3.4",
+    "instagram-url-direct": "^1.0.13",
+    "dotenv": "^16.0.3",
+    "winston": "^3.8.2",
+    "pm2": "^5.3.0"
+  }
+} 
